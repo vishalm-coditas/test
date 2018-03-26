@@ -1,0 +1,15 @@
+as per POST request body I had got from swagger for public/org/{org_id}/segment
+
+filters have conditions in like  
+"conditions": [
+        {
+          "operator": "<",
+          "value": 0,
+          "context": "string"
+        }
+      ],
+      "context": "string"
+
+serializer though is not taking any context as an input parameter, this leads to http 500
+
+when post of put method is used on this api. This is why I've added context here.
